@@ -8,6 +8,5 @@ do
   if [ -e ${destinations[$i]} ]
   then
     rsync ${sources[$i]} ${destinations[$i]} -P -r --ignore-existing
-    growlnotify -m "${sources[$i]} is backed up!"
   fi
 done
