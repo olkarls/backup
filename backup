@@ -1,0 +1,13 @@
+#!/bin/sh
+
+sources=(~/Movies/Screencasts)
+destinations=(/Volumes/Qmultimedia/Movies)
+
+for (( i = 0 ; i < ${#destinations[@]} ; i++ ))
+do
+  if [ -e ${destinations[$i]} ]
+  then
+    rsync ${sources[$i]} ${destinations[$i]} -P -r --ignore-existing
+    growlnotify -m "${sources[$i]} is backed up!"
+  fi
+done
