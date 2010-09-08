@@ -1,7 +1,5 @@
 #!/bin/sh
 
-MAILTO=""
-
 sources=(~/Movies/Screencasts)
 destinations=(/Volumes/Qmultimedia/Movies)
 
